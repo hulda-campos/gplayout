@@ -1,0 +1,38 @@
+<ion-app>
+  <ion-menu side="start">
+      <ion-header>
+          <ion-toolbar>
+              <ion-title>
+                  Guardião de Papel
+              </ion-title>
+          </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+          <ion-list>
+              <ion-menu-toggle>
+                  <ion-item lines="none" routerLink="/comic/tabs/comic-list">
+                      <ion-icon name="book-outline" slot="start"></ion-icon>
+                      <ion-label>Quadrinhos</ion-label>
+                  </ion-item>
+              </ion-menu-toggle>
+              <ion-menu-toggle>
+                  <ion-item lines="none" routerLink="/user/profile">
+                      <ion-icon name="person-outline" slot="start"></ion-icon>
+                      <ion-label>Perfil</ion-label>
+                  </ion-item>
+              </ion-menu-toggle>
+
+          </ion-list>
+      </ion-content>
+      <ion-footer>
+        <ion-menu-toggle >
+          <ion-item lines="none" button >
+              <ion-icon name="exit" slot="end"></ion-icon>
+              <ion-label>Logout</ion-label>
+          </ion-item>
+      </ion-menu-toggle>
+      </ion-footer>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>
