@@ -1,4 +1,4 @@
-<ion-content color="dark">
+<ion-content color="light">
   <form>
     <ion-grid>
 
@@ -49,7 +49,7 @@
 
       <ion-row class="ion-btn">
         <ion-col size-sm="6" offset-sm="3">
-          <ion-button shape="round" color="tertiary" expand="block">
+          <ion-button shape="round" color="tertiary" expand="block" (click)="loginGoogle()">
             <ion-icon name="logo-google" slot="start"></ion-icon>
             <small>Login com Google</small>
           </ion-button>
@@ -60,7 +60,7 @@
         <ion-col size-sm="6" offset-sm="3">
           <ion-text> Novo por aqui?</ion-text>
             <ion-button shape="round" color="tertiary" expand="block" fill="clear" routerLink="/signup">
-              <small>Cadastre-se</small>
+              <small>Crie uma conta!</small>
             </ion-button>
         </ion-col>
       </ion-row>

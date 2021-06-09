@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'comics',
     loadChildren: () => import('./comics/comics.module').then( m => m.ComicsPageModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
 ];
 
 @NgModule({

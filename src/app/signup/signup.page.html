@@ -1,14 +1,14 @@
-<ion-header translucent="true">
-  <ion-toolbar translucent="true" color="dark">
+
+  <ion-toolbar translucent="true" color="light">
     <ion-buttons slot="start">
       <ion-back-button color="tertiary" defaultHref="login"></ion-back-button>
     </ion-buttons>
+    <ion-title color="tertiary">Criar Conta</ion-title>
   </ion-toolbar>
-</ion-header>
 
 
-<ion-content color="dark" >
-  <form>
+<ion-content color="light" >
+  <form [formGroup]="signupForm">
     <ion-grid>
 
       <ion-row class="img-col">
@@ -30,13 +30,13 @@
           <ion-card>
             <ion-item lines="none">
               <ion-icon name="mail-outline" slot="start" color="tertiary"></ion-icon>
-              <ion-input type="email" name="email" placeholder="E-mail"></ion-input>
+              <ion-input type="email" name="email" placeholder="E-mail" formControlName="email"></ion-input>
             </ion-item>
           </ion-card>
           <ion-card>
             <ion-item lines="none">
               <ion-icon name="lock-closed-outline" slot="start" color="tertiary"></ion-icon>
-              <ion-input type="password" name="password" placeholder="Senha"></ion-input>
+              <ion-input type="password" name="password" placeholder="Senha" formControlName="password"></ion-input>
             </ion-item>
           </ion-card>
         </ion-col>
@@ -44,7 +44,7 @@
 
       <ion-row class="ion-btn ion-margin-top">
         <ion-col size-sm="6" offset-sm="3">
-          <ion-button shape="round" color="tertiary" expand="block">
+          <ion-button shape="round" color="tertiary" expand="block" (click)="signUpWithEmailPassword()">
             <ion-icon name="log-in-outline" slot="start"></ion-icon>
             <small>Signup</small>
           </ion-button>

@@ -17,7 +17,7 @@
                   </ion-item>
               </ion-menu-toggle>
               <ion-menu-toggle>
-                  <ion-item lines="none" routerLink="/user/profile">
+                  <ion-item lines="none" routerLink="/profile">
                       <ion-icon name="person-outline" slot="start"></ion-icon>
                       <ion-label>Perfil</ion-label>
                   </ion-item>
@@ -27,7 +27,7 @@
       </ion-content>
       <ion-footer>
         <ion-menu-toggle >
-          <ion-item lines="none" button >
+          <ion-item lines="none" button (click)="logout()">
               <ion-icon name="exit" slot="end"></ion-icon>
               <ion-label>Logout</ion-label>
           </ion-item>

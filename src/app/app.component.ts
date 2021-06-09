@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { Platform } from '@ionic/angular';
@@ -12,7 +14,9 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(
-    private platform: Platform
+    private platform: Platform,
+    public auth: AngularFireAuth,
+    private router: Router
   ) {
     this.initializeApp();
   }
@@ -24,4 +28,17 @@ export class AppComponent {
       }
     });
   }
+  logout() {
+    this.auth.signOut()
+    .then(
+      () => {
+        this.router.navigate(['login']);
+      }
+    )
+    .catch(
+      (error) => {
+        console.error(error);
+      }
+    );
+    }
 }
